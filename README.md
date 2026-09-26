@@ -4,7 +4,7 @@ Groundwater flow and solute transport examples in Python. This repository collec
 
 | Example | What it covers | Current status |
 | --- | --- | --- |
-| [Transient groundwater flow](Transient%20Groundwater%20Flow%20Example.ipynb) | Pumping-test interpretation, Theis drawdown, superposition, image wells and river influx | Analysis notebook; its original pumping-test spreadsheet is not included. Embedded diagrams are retained; stale execution outputs have been cleared. |
+| [Transient groundwater flow](Transient%20Groundwater%20Flow%20Example.ipynb) | Pumping-test interpretation, Theis drawdown, superposition, image wells and river influx | Analysis notebook; its original pumping-test spreadsheet is not included. Saved plots and embedded diagrams are retained as illustrations of the original analysis. |
 | [Sand tank Monte Carlo](SandTank_Flopy_MonteCarlo.ipynb) | FloPy setup for MODFLOW-2005 and MT3DMS, parameter sampling and breakthrough-curve comparison | Annotated research template; observation data, parameter bounds, executable paths and several model inputs must be supplied. It cannot be run end to end as provided. |
 | [Three-well demo](examples/transient_flow_demo.py) | A self-contained Theis calculation for three pumping wells | Runnable without external data or groundwater solver executables. |
 
@@ -31,7 +31,7 @@ jupyter lab
 
 ### Running the transient-flow notebook
 
-The notebook expects a local Excel workbook with a `days` column and drawdown columns for the observation wells. The workbook used in the original analysis was not committed. Set `DATA_FILE` in the first input cell to your own workbook path and verify the pumping rate, well distances, aquifer geometry and units against your data. The notebook raises a clear error if the workbook is missing. The embedded diagrams are illustrative; generated code output was cleared because no input workbook is supplied here.
+The notebook expects a local Excel workbook with a `days` column and drawdown columns for the observation wells. The workbook used in the original analysis was not committed. Change `file` in the first data-loading cell to your workbook path and verify the pumping rate, observation-well distances, aquifer geometry and units against your data. The original code uses two different lists of observation-well distances, so confirm which one applies before rerunning. The saved plots and embedded diagrams illustrate the original analysis; they are not fresh results from data supplied here.
 
 ### Adapting the sand-tank template
 
